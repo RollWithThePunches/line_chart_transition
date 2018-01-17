@@ -1,60 +1,36 @@
 <!doctype HTML>
 <html>
-	<head>
-		<title>Beer chart test</title>
-		<script src="d3.v4.js"></script>
-		<style>
+<head>
+	<title>Beer chart test</title>
+	<script src="d3.v4.js"></script>
+	<style>
+		html, body{
+			margin: 0;
+			height: 100%;
+		}
 
-			html, body{
-				margin: 0;
-				height: 100%;
-			}
+		h1{ font-family: helvetica, arial, sans-serif; text-align: center; }
 
-			h1{ font-family: helvetica, arial, sans-serif; text-align: center; }
+		path.domain,
+		g.tick line {
+		    stroke: #000;
+		}
+		
+		g.tick text {
+		    font-size: 12px;
+		    fill: #000;
+		 }
 
-			/*Using this below to add style to the group in interpolate. Since it is group0, this will only affect the first group. */
+		.line{
+		     stroke: black;
+		     fill: none;
+		     stroke-width: 2;
+		}
+	</style>
+</head>
+<body>
+	<div id="area-chart"></div>
+	<script type="text/javascript" src="line-chart-transition-script.js"></script>
 
-			g.group path{
-			    stroke: red;
-			    stroke-width: 3px;
-			    fill: none;
-			}
-
-			/*Use tick line to change the colors of the ticks in the axis. use path.domain for the vertical part of the axis*/
-
-
-			path.domain,
-			g.tick line {
-			    stroke: #000;
-			}
-
-			/* Adding color to text. Use fill rather than color for text in svg */
-
-			g.tick text {
-			    font-size: 12px;
-			    fill: #000;
-			 }
-
-			.line{
-			stroke: black;
-			fill: none;
-			stroke-width: 2;
-			}
-
-		</style>
-	</head>
-
-	<body>
-		<div id="area-chart"></div>
-		<script type="text/javascript" src="line-chart-transition-script.js"></script>
-
-
-	<script>
-
-
-	</script>
-
-	</body>
-
-
+</body>
 </html>
